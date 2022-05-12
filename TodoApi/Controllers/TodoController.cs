@@ -11,7 +11,6 @@ using TodoApi.Entities;
 
 namespace TodoApi.Controllers
 {
-    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class TodoController : ControllerBase

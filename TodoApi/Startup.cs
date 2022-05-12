@@ -23,16 +23,13 @@ namespace TodoApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                options.AddPolicy(name: "MyPolicy",
-                    policy =>
-                    {
-                        policy.WithOrigins(
-                            "https://localhost:3000")
-                                .WithMethods("PUT", "DELETE", "GET");
-                    });
-            });
+                builder.WithOrigins("http://localhost:3001")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -56,7 +53,7 @@ namespace TodoApi
             app.UseHttpsRedirection();
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors("MyPolicy");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
