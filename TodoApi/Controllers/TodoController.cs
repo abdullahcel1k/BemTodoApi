@@ -36,12 +36,20 @@ namespace TodoApi.Controllers
         }
 
         [HttpDelete]
-        public async Task<Todo> Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var deletedTodo = await _todoContext.Todos.FindAsync(id);
+            var deletedTodo = new Todo();
+            try
+            {
+
+                deletedTodo  = await _todoContext.Todos.FindAsync(id);
             _todoContext.Todos.Remove(deletedTodo);
             _todoContext.SaveChanges();
-            return deletedTodo;
+            }catch(Exception ex)
+            {
+                return BadRequest();
+            }
+            return Ok(deletedTodo);
         }
 
         [HttpPatch]
