@@ -29,7 +29,6 @@ C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Microsoft.Identity
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -59,3 +58,4 @@ C:\Users\PC1411\source\repos\TodoApi\TodoApi\obj\Debug\net5.0\TodoApi.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\obj\Debug\net5.0\ref\TodoApi.dll
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\obj\Debug\net5.0\TodoApi.pdb
 C:\Users\PC1411\source\repos\TodoApi\TodoApi\obj\Debug\net5.0\TodoApi.genruntimeconfig.cache
+C:\Users\PC1411\source\repos\TodoApi\TodoApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
