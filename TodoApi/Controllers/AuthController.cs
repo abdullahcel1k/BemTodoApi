@@ -47,7 +47,7 @@ namespace TodoApi.Controllers
                         Issuer = "burasını anlamaıdm",
                         Subject = new ClaimsIdentity(
                             new Claim[]{
-                             new Claim(ClaimTypes.Email, findedUser.Email)
+                             new Claim(ClaimTypes.Name, findedUser.FullName)
                             }
                         ),
                         // TODO : burada kullanıcının tokenları alınıp varsa onlar basılmalı JWT içine
