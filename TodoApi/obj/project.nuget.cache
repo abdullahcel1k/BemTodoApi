@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QB5Am2DCtbqer6/V8KCeIYRIt64o/qpDLp/uF7++uFeHlbac6EKc9ItVl4wrkCWwqphk+OsUaU8WfNL0MMGnYA==",
+  "dgSpecHash": "O6A8iIRO2zDu/myXQ53FDMAFf8Q0nMbmuJe51rPU3oGyh9/+enzx5nS8tebqBphyIWRKJbt2qIgnP8hh2CuOLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC1411\\source\\repos\\TodoApi\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\PC1411\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\PC1411\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\PC1411\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.11\\microsoft.aspnetcore.authentication.jwtbearer.5.0.11.nupkg.sha512",
     "C:\\Users\\PC1411\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

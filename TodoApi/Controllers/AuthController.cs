@@ -10,6 +10,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using TodoApi.Data;
+using TodoApi.Helpers;
 using TodoApi.ViewModels;
 
 namespace TodoApi.Controllers
@@ -18,11 +20,13 @@ namespace TodoApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IConfiguration config;
+        private readonly IConfiguration _config;
+        private readonly TodoContext _context;
 
-        public AuthController(IConfiguration _config)
+        public AuthController(IConfiguration config, TodoContext context)
         {
-            config = _config;
+            _config = config;
+            _context = context;
         }
 
         [AllowAnonymous]
@@ -31,18 +35,19 @@ namespace TodoApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                if (userForm.Username == "Abdullah")
+                var findedUser = _context.Users.FirstOrDefault(x => x.Email == userForm.Email);
+
+                if (BCrypt.Net.BCrypt.Verify(userForm.Password + findedUser.PasswordSalt, findedUser.Password))
                 {
                     var tokenHandler = new JwtSecurityTokenHandler();
-                    var key = Encoding.ASCII.GetBytes(config["Application:Secret"]);
+                    var key = Encoding.ASCII.GetBytes(_config["Application:Secret"]);
                     var tokenDescriptor = new SecurityTokenDescriptor
                     {
                         Audience = "TodoApi",
                         Issuer = "burasını anlamaıdm",
                         Subject = new ClaimsIdentity(
                             new Claim[]{
-                             new Claim(ClaimTypes.Name, userForm.Username)
+                             new Claim(ClaimTypes.Email, findedUser.Email)
                             }
                         ),
                         // TODO : burada kullanıcının tokenları alınıp varsa onlar basılmalı JWT içine
